@@ -7,8 +7,6 @@ point_q = ipc.MessageQueue("/keyQueue", ipc.O_CREAT)
 
 
 while True:
-    angles = []
-    ranges = []
     msg = point_q.receive()
     data = msg[0].decode('utf-8')
     print(data)
